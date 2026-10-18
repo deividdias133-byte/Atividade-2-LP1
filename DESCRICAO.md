@@ -13,43 +13,52 @@ O sistema guarda resultados de partidas e os times.
 ## O que dá para fazer
 
 cadastrar-time: registra um novo time antes do campeonato começar.
-começar-campeonato: começa um novo campeonato.
-mostrar-tabela: mostra a tabela do campeonato.
-resultado: Você decide quem ganha e a quantidade de kills de cada time.
-mostrar-resultado: mostra os resultados das partidas.
-mostrar-vencedor: Mostra o quem é o vencedor do campeonato.
-encerrar-campeonato: encerra o campeonato sem vencedores e os times são excluidos junto com os dados do campeonato.
-apagar-time: apaga time existente antes do campeonato começar.
+começar-campeonato: começa um novo campeonato, quando já houver de 4 a 10 times, em número par.
+mostrar-tabela: mostra a tabela do campeonato, com a posição de cada time, as vitórias e o total de kills.
+resultado: você decide quem ganha a partida e a quantidade de kills de cada um dos dois times.
+mostrar-resultado: mostra os resultados das partidas já registradas.
+mostrar-vencedor: mostra quem é o vencedor do campeonato.
+encerrar-campeonato: encerra o campeonato sem vencedores e os times são excluídos junto com os dados do campeonato.
+apagar-time: apaga um time existente antes do campeonato começar.
 
 ## Regras
 
-Não dá para ter empate nas partidas, apenas na tabela.
+Cada partida tem um vencedor; empate não existe na partida. Empate quer dizer
+dois times com o mesmo número de vitórias na tabela.
 Não dá para registrar um confronto que já aconteceu.
 O empate que importa é apenas o do primeiro lugar.
-Se três times empatarem o é executado o comando encerrar-campeonato.
-O comando resultado decide o resultado das partidas com quem venceu e a quantidade de kills de cada time, as kills servirão de critério de desempate,
-o que contará como critério inicial será o número de vitórias, caso o campeonato acabe com o número de vitórias iguais entre dois times, considerará quem tiver o maior número de kills,
-caso tenha o mesmo número de kills ocorrerá uma partida de desempate.
-A partida de desempate não mudará a tabela, só decidirá o vencedor.
-A partida de desempate você decide o vencedor.
-O comando mostrar-vencedor não pode ser execultado antes do campeonato acabar, caso contrário dará erro.
-Cada time disputará uma partida com todos do campeonato, quando todas as partidas acontecerem, o campeonato se encerra.
-Não pode dois times com o mesmo nome, não pode ter dois vencedores, não pode alterar as estatísticas da tabela.
-Também não poderá haver numero de times ímpares, apensa um número de times par.
-Poderá haver uma quantia de no máximo 10 times, o número mínimo de times é quatro.
-A ordem da tabela é por vitórias, o critério de desempate é as kills feitas nas partidas.
+O critério para ordenar a tabela é, primeiro, o número de vitórias; o
+desempate é o total de kills que o time fez em todas as partidas, ganhas ou
+perdidas.
+Se dois times terminarem com o mesmo número de vitórias e o mesmo número de
+kills em primeiro lugar, acontece uma partida de desempate. Você decide o
+vencedor dessa partida. Ela não muda a tabela, só decide quem é o campeão.
+Se três times empatarem em primeiro lugar, o campeonato encerra sem vencedor,
+mas os times e a tabela continuam guardados.
+Fora do primeiro lugar, times com vitórias empatadas são ordenados pelas
+kills; se as kills também empatarem, os dois ficam na mesma posição na tabela.
+Cada time disputará uma partida com todos os times do campeonato; quando
+todas as partidas acontecerem, o campeonato se encerra sozinho.
+O comando mostrar-vencedor não pode ser executado antes de o campeonato
+acabar, caso contrário dará erro.
+Não pode haver dois times com o mesmo nome, não pode haver dois vencedores e
+não existe comando para alterar estatísticas já registradas na tabela.
+Não pode haver número de times ímpares: apenas número par, no mínimo 4 e no
+máximo 10. Essa conferência acontece no começar-campeonato.
 
 ## Quando algo dá errado
 
 Quando tentar registrar um time depois de começar o campeonato.
 Quando tentar apagar um time depois de começar o campeonato.
-Quando tentar registrar mias de 10 ou menos de 4 times.
-Caso tente imprimir o resultado antes de começar.
-Quanto o time não existir ao tentar executar os comandos.
-Nome de time repetido.
-lista vazia.
-Texto onde eram números, como kills "abc" ou kills negativas.
-
+Quando tentar começar o campeonato com menos de 4 times, mais de 10 times ou
+com número ímpar de times.
+Quando tentar mostrar a tabela ou o resultado antes de começar o campeonato.
+Quando tentar mostrar o vencedor antes de o campeonato acabar.
+Quando o time não existir ao tentar executar os comandos.
+Quando nome de time repetido.
+Quando tentar registrar um confronto que já aconteceu.
+Quando tentar começar o campeonato sem times cadastrados (lista vazia).
+Quando o que era número não for número, como kills "abc", ou kills negativas.
 
 ## Classes que eu imagino
 
@@ -57,16 +66,21 @@ Campeonato: é quem junta tudo.
 time: guarda os dados de um time.
 partida: representa uma partida já realizada.
 
-
 ## Exemplo de uso
 
 ===== campeonato =====
 cadastrar-time
 começar-campeonato
+resultado
+mostrar-tabela
+mostrar-resultado
+mostrar-vencedor
+encerrar-campeonato
+apagar-time
 
 ===== cadastrar-time =====
 time 1:
-nome:meu_time
+nome: meu_time
 
 time 2:
-nome: meu_time2...
+nome: meu_time2
