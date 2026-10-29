@@ -4,7 +4,7 @@ Este sistema organiza e simula um campeonato de um jogo estilo FPS.
 
 ## Nome e ideia
 
-O sistema é campeonatos e serve para organizar campeonatos.
+O sistema é simulador de campeonatos e serve para organizar campeonatos.
 
 ## O que o sistema guarda
 
@@ -18,8 +18,10 @@ mostrar-tabela: mostra a tabela do campeonato, com a posição de cada time, as 
 resultado: você decide quem ganha a partida e a quantidade de kills de cada um dos dois times.
 mostrar-resultado: mostra os resultados das partidas já registradas.
 mostrar-vencedor: mostra quem é o vencedor do campeonato.
+desempate: você decide o vencedor da partida de desempate, quando dois times empatarem em primeiro lugar.
 encerrar-campeonato: encerra o campeonato sem vencedores e os times são excluídos junto com os dados do campeonato.
 apagar-time: apaga um time existente antes do campeonato começar.
+ajuda: mostra a lista de comandos e o formato dos argumentos.
 
 ## Regras
 
@@ -75,8 +77,10 @@ resultado
 mostrar-tabela
 mostrar-resultado
 mostrar-vencedor
+desempate
 encerrar-campeonato
 apagar-time
+ajuda
 
 ===== cadastrar-time =====
 time 1:

@@ -1,0 +1,13 @@
+cadastrar-time T1
+cadastrar-time T2
+cadastrar-time T3
+cadastrar-time T4
+cadastrar-time T5
+cadastrar-time T6
+cadastrar-time T7
+cadastrar-time T8
+cadastrar-time T9
+cadastrar-time T10
+cadastrar-time T11
+cadastrar-time T12
+começar-campeonato

@@ -1,0 +1,7 @@
+cadastrar-time A
+cadastrar-time B
+cadastrar-time C
+cadastrar-time D
+apagar-time Z
+começar-campeonato
+resultado A Z A 10 5

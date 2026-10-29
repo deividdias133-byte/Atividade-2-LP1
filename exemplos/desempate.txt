@@ -1,0 +1,16 @@
+cadastrar-time A
+cadastrar-time B
+cadastrar-time C
+cadastrar-time D
+começar-campeonato
+resultado A B A 10 5
+resultado A C A 10 5
+resultado A D D 5 10
+resultado B C B 10 5
+resultado B D B 10 5
+resultado C D C 10 5
+mostrar-tabela
+mostrar-vencedor
+desempate B
+mostrar-vencedor
+mostrar-tabela

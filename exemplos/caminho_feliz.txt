@@ -1,0 +1,21 @@
+cadastrar-time Alpha
+cadastrar-time Bravo
+cadastrar-time Charlie
+cadastrar-time Delta
+começar-campeonato
+resultado Alpha Bravo Alpha 10 5
+resultado Alpha Charlie Alpha 10 5
+resultado Alpha Delta Alpha 10 5
+resultado Bravo Charlie Bravo 10 5
+resultado Bravo Delta Bravo 10 5
+resultado Charlie Delta Charlie 10 5
+mostrar-tabela
+mostrar-resultado
+mostrar-vencedor
+encerrar-campeonato
+cadastrar-time Novo1
+cadastrar-time Novo2
+cadastrar-time Novo3
+cadastrar-time Novo4
+começar-campeonato
+mostrar-tabela

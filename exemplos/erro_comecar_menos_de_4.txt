@@ -1,0 +1,4 @@
+cadastrar-time A
+cadastrar-time B
+cadastrar-time C
+começar-campeonato
